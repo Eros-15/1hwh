@@ -31,7 +31,7 @@
   <nav class="bg-white shadow p-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap">
             <a href="index.html" class="flex items-center gap-2">
-        <span class="text-xl font-bold">Eros(韩国主播)1服务器</span>
+        <span class="text-xl font-bold">Eros(网红头条)1服务器</span>
       </a>
       <button class="sm:hidden text-gray-600" onclick="toggleMenu()">☰</button>
       <div id="navMenu" class="w-full sm:w-auto hidden sm:flex flex-col sm:flex-row gap-3 mt-2 sm:mt-0">
@@ -138,8 +138,8 @@ function validateLogin(username, password) {
 async function loadVideos() {
   try {
     const [mainRes, freeRes] = await Promise.all([
-      fetch("https://eros-15.github.io/videos.json").then(r => r.json()),
-      fetch("https://eros-15.github.io/free_videos.json").then(r => r.json())
+      fetch("https://eros-15.github.io/1hwh/videos.json").then(r => r.json()),
+      fetch("https://eros-15.github.io/1hwh/free_videos.json").then(r => r.json())
     ]);
     videos = [...mainRes, ...freeRes];
     generateCategories();
